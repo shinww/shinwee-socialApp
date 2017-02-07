@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C5204421E485ACE009A7D7F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5204411E485ACE009A7D7F /* SignInVC.swift */; };
 		3C7B55D91E33222300636FCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B55D81E33222300636FCB /* AppDelegate.swift */; };
-		3C7B55DB1E33222300636FCB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B55DA1E33222300636FCB /* SignInVC.swift */; };
 		3C7B55DE1E33222300636FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B55DC1E33222300636FCB /* Main.storyboard */; };
 		3C7B55E01E33222300636FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B55DF1E33222300636FCB /* Assets.xcassets */; };
 		3C7B55E31E33222400636FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B55E11E33222400636FCB /* LaunchScreen.storyboard */; };
@@ -22,9 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2610C51E389EC900F01A64 /* socialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socialApp.entitlements; sourceTree = "<group>"; };
+		3C5204411E485ACE009A7D7F /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3C7B55D51E33222300636FCB /* socialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7B55D81E33222300636FCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C7B55DA1E33222300636FCB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3C7B55DD1E33222300636FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C7B55DF1E33222300636FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C7B55E21E33222400636FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		3C7B55D71E33222300636FCB /* socialApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C2610C51E389EC900F01A64 /* socialApp.entitlements */,
 				3C7B55F11E376B4F00636FCB /* Utilities */,
 				3C7B55EC1E33474D00636FCB /* Model */,
 				3C7B55ED1E33475500636FCB /* View */,
@@ -108,7 +110,7 @@
 		3C7B55EE1E33475C00636FCB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3C7B55DA1E33222300636FCB /* SignInVC.swift */,
+				3C5204411E485ACE009A7D7F /* SignInVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -174,6 +176,11 @@
 					3C7B55D41E33222300636FCB = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -263,10 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C7B55F71E37710A00636FCB /* FancyField.swift in Sources */,
-				3C7B55DB1E33222300636FCB /* SignInVC.swift in Sources */,
 				3C7B55F51E376DB500636FCB /* RoundBtn.swift in Sources */,
 				3C7B55D91E33222300636FCB /* AppDelegate.swift in Sources */,
 				3C7B55F01E376AB800636FCB /* FancyView.swift in Sources */,
+				3C5204421E485ACE009A7D7F /* SignInVC.swift in Sources */,
 				3C7B55F31E376B7400636FCB /* Constants.swift in Sources */,
 				3C7B55F91E3773A400636FCB /* FancyBtn.swift in Sources */,
 			);
@@ -392,6 +399,7 @@
 			baseConfigurationReference = F422C9AC379BED00DE0A5CF8 /* Pods-socialApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = socialApp/socialApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = socialApp/Info.plist;
@@ -407,6 +415,7 @@
 			baseConfigurationReference = 6626FDBBD96C2E590CCFB566 /* Pods-socialApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = socialApp/socialApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = socialApp/Info.plist;
